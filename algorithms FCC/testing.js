@@ -1,5 +1,8 @@
-function findElement(arr, func) {
-  return arr[arr.map(func).indexOf(true)];
+function reverseString(str) {
+  debugger;
+  return str.split('').reduce((acc, val) => {
+    return val + acc
+  })
 }
 
-console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+reverseString("hello");
