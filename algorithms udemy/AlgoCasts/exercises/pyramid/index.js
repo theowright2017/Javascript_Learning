@@ -13,7 +13,39 @@
 //       '  #  '
 //       ' ### '
 //       '#####'
+//   pyramid(4)
+//       '   #   '
+//       '  ###  '
+//       ' ##### '
+//       '#######'
 
-function pyramid(n) {}
+// spaces less than n will be +2 either side, as n increments
+// and then -= 1 for each consecutive line
+// hash will also be plus 2 for each inc. of n
 
+// function pyramid(n) {
+//     let hash = "#"
+//     let space = "a"
+//     let string = ""
+//     let count = n
+//     for (let i = 1; i <= n; i++) {
+//         string = space.repeat(count-1) + hash.repeat((i*2) - 1) + space.repeat(count-1)
+//         count--  
+//         console.log(string)
+//     }   
+// }
+function pyramid(n) {
+    let hash = "#"
+    let space = "a"
+    let string = ""
+    let count = n
+    for (let row = 0; row <= n; row++) {
+       
+    }   
+}
+
+console.log(pyramid(4))
 module.exports = pyramid;
+
+
+
