@@ -18,6 +18,36 @@
 //       '  ###  '
 //       ' ##### '
 //       '#######'
+//   pyramid(5)
+//       '    #    '
+//       '   ###   '
+//       '  #####  '
+//       ' ####### '
+//       '#########'
+//
+
+
+function pyramid(n, row = 1) {
+    if (row > n ) { return }
+
+    let string = []
+    let colL = n - row + 1
+    let colR = n + row - 1
+    for ( let column = 1; column <= n*2-1; column++ ){
+        if (  row === 1 && column === n || 
+              column >= colL && column <= colR){
+            string.push('#')
+        }
+        else {
+            string.push(' ')
+        }
+    }
+    console.log(string.join(''))
+  
+    return pyramid(n, row + 1)
+}
+
+pyramid(20)
 
 // spaces less than n will be +2 either side, as n increments
 // and then -= 1 for each consecutive line
@@ -35,23 +65,25 @@
 //     }   
 // }
 
-function pyramid(n) {
-    const midpoint = Math.floor((2 * n - 1) / 2)
-    for (let row = 0; row < n; row++) {
-        let level = "";
+// function pyramid(n) {
+//     const midpoint = Math.floor((2 * n - 1) / 2)
+//     for (let row = 0; row < n; row++) {
+//         let level = "";
         
-        for (let column = 0; column < 2 * n -1; column++) {
-            if ( midpoint - row <= column && midpoint + row >= column) {
-                level += "#"
-            } else {
-                level += " "
-            }
-        }
-        console.log(level)
-    }
-}
+//         for (let column = 0; column < 2 * n -1; column++) {
+//             if ( midpoint - row <= column && midpoint + row >= column) {
+//                 level += "#"
+//             } else {
+//                 level += " "
+//             }
+//         }
+//         console.log(level)
+//     }
+// }
 
-console.log(pyramid(4))
+
+
+
 module.exports = pyramid;
 
 
