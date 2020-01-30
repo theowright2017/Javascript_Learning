@@ -34,14 +34,21 @@
 //         console.log(string)
 //     }   
 // }
+
 function pyramid(n) {
-    let hash = "#"
-    let space = "a"
-    let string = ""
-    let count = n
-    for (let row = 0; row <= n; row++) {
-       
-    }   
+    const midpoint = Math.floor((2 * n - 1) / 2)
+    for (let row = 0; row < n; row++) {
+        let level = "";
+        
+        for (let column = 0; column < 2 * n -1; column++) {
+            if ( midpoint - row <= column && midpoint + row >= column) {
+                level += "#"
+            } else {
+                level += " "
+            }
+        }
+        console.log(level)
+    }
 }
 
 console.log(pyramid(4))
