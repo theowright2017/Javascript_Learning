@@ -9,7 +9,7 @@
 
 
 
-// each letter is subbed for one 13 points above it, if letter at end, remainder 
+// each letter is subbed for one 13 points above it, if letter at end, remainder
 // starts from 65
 
 function rot13(str) {
@@ -22,9 +22,9 @@ function rot13(str) {
   for (each of arr) {
     let code = each.charCodeAt(0)
     let newCode = each.charCodeAt(0) + 13
- 
-    if (code >= 65 && code <= 90 || code >= 97 && code <= 122) { 
-      if (code >= 65 && code <= 90) {  
+
+    if (code >= 65 && code <= 90 || code >= 97 && code <= 122) {
+      if (code >= 65 && code <= 90) {
         if ( code + 13 >= 90){
           let num = 12 - (90 - code)
           result.push(String.fromCharCode(65 + num))
@@ -39,8 +39,8 @@ function rot13(str) {
 
 
 
-    } else { 
-      result.push(each) 
+    } else {
+      result.push(each)
     }
 
   }
